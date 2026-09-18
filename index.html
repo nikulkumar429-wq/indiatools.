@@ -6,405 +6,216 @@
 
 <title>IndiaTools - Free Online Utility Tools</title>
 
-<meta name="description" content="Free online tools for image compression, photo resizing, PDF conversion, QR codes, OCR, age calculation and resume creation.">
-<meta name="keywords" content="image compressor, passport photo resize, jpg to pdf, pdf compressor, qr generator, image to text, age calculator, resume builder">
+<meta name="description" content="Free online tools for image compression, photo resizing, JPG to PDF, PDF tools, QR codes, OCR, age calculation and resume creation.">
 <meta name="robots" content="index, follow">
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f6f7fb;
-  color:#171717;
-  line-height:1.6;
+font-family:Arial,Helvetica,sans-serif;
+background:#f6f7fb;
+color:#171717;
+line-height:1.6
 }
-
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(255,255,255,.96);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid #e9e9ee;
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(12px);
+border-bottom:1px solid #e9e9ee
 }
-
 .nav{
-  max-width:1150px;
-  margin:auto;
-  padding:15px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
+max-width:1150px;
+margin:auto;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center
 }
-
 .logo{
-  font-size:25px;
-  font-weight:900;
-  background:linear-gradient(90deg,#5b21b6,#2563eb,#06b6d4);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+font-size:25px;
+font-weight:900;
+background:linear-gradient(90deg,#5b21b6,#2563eb,#06b6d4);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent
 }
-
-nav{
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-}
-
-nav a{
-  text-decoration:none;
-  color:#333;
-  font-size:14px;
-  font-weight:700;
-}
-
-nav a:hover{
-  color:#2563eb;
-}
-
+nav{display:flex;gap:18px}
+nav a{text-decoration:none;color:#333;font-size:14px;font-weight:700}
 .hero{
-  text-align:center;
-  padding:75px 20px 60px;
-  background:
-    radial-gradient(circle at 10% 10%,rgba(91,33,182,.14),transparent 30%),
-    radial-gradient(circle at 90% 10%,rgba(6,182,212,.14),transparent 30%),
-    #fff;
+text-align:center;
+padding:75px 20px 60px;
+background:
+radial-gradient(circle at 10% 10%,rgba(91,33,182,.14),transparent 30%),
+radial-gradient(circle at 90% 10%,rgba(6,182,212,.14),transparent 30%),#fff
 }
-
-.hero h1{
-  font-size:clamp(38px,7vw,68px);
-  line-height:1.05;
-  font-weight:900;
-  margin-bottom:18px;
-}
-
+.hero h1{font-size:clamp(38px,7vw,68px);line-height:1.05;margin-bottom:18px}
 .gradient{
-  background:linear-gradient(90deg,#5b21b6,#2563eb,#06b6d4);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+background:linear-gradient(90deg,#5b21b6,#2563eb,#06b6d4);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent
 }
-
-.hero p{
-  max-width:700px;
-  margin:auto;
-  color:#666;
-  font-size:18px;
+.hero p{max-width:700px;margin:auto;color:#666;font-size:18px}
+.search{max-width:750px;margin:30px auto 0;display:flex;gap:10px}
+.search input,.field{
+width:100%;
+padding:13px;
+border:1px solid #ddd;
+border-radius:10px;
+outline:none
 }
-
-.search{
-  max-width:750px;
-  margin:30px auto 0;
-  display:flex;
-  gap:10px;
-}
-
-.search input{
-  flex:1;
-  padding:17px;
-  border:1px solid #ddd;
-  border-radius:14px;
-  outline:none;
-  font-size:16px;
-}
-
-.search input:focus{
-  border-color:#2563eb;
-  box-shadow:0 0 0 3px rgba(37,99,235,.1);
-}
-
+.search input{flex:1;padding:17px;font-size:16px}
 .btn{
-  border:none;
-  border-radius:14px;
-  padding:0 24px;
-  min-height:54px;
-  background:linear-gradient(90deg,#5b21b6,#2563eb);
-  color:#fff;
-  font-weight:800;
-  cursor:pointer;
+border:none;
+border-radius:14px;
+padding:0 24px;
+min-height:54px;
+background:linear-gradient(90deg,#5b21b6,#2563eb);
+color:#fff;
+font-weight:800;
+cursor:pointer
 }
-
-.btn:hover{
-  opacity:.9;
-}
-
-.section{
-  max-width:1150px;
-  margin:auto;
-  padding:65px 20px;
-}
-
-.section h2{
-  text-align:center;
-  font-size:34px;
-  margin-bottom:12px;
-}
-
-.section-sub{
-  text-align:center;
-  color:#666;
-  margin-bottom:35px;
-}
-
+.section{max-width:1150px;margin:auto;padding:65px 20px}
+.section h2{text-align:center;font-size:34px;margin-bottom:12px}
+.section-sub{text-align:center;color:#666;margin-bottom:35px}
 .tools{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
 }
-
 .tool{
-  background:#fff;
-  border:1px solid #e8e8ed;
-  border-radius:20px;
-  padding:25px;
-  box-shadow:0 8px 28px rgba(0,0,0,.04);
-  transition:.2s;
+background:#fff;
+border:1px solid #e8e8ed;
+border-radius:20px;
+padding:25px;
+box-shadow:0 8px 28px rgba(0,0,0,.04)
 }
-
-.tool:hover{
-  transform:translateY(-3px);
-  box-shadow:0 14px 35px rgba(0,0,0,.08);
-}
-
-.icon{
-  font-size:38px;
-  margin-bottom:10px;
-}
-
-.tool h3{
-  margin-bottom:8px;
-}
-
-.tool p{
-  color:#666;
-  font-size:14px;
-  min-height:45px;
-}
-
+.icon{font-size:38px;margin-bottom:10px}
+.tool h3{margin-bottom:8px}
+.tool p{color:#666;font-size:14px;min-height:45px}
 .tool button{
-  margin-top:18px;
-  width:100%;
-  padding:12px;
-  border:none;
-  border-radius:11px;
-  background:#111827;
-  color:#fff;
-  font-weight:700;
-  cursor:pointer;
+margin-top:18px;
+width:100%;
+padding:12px;
+border:none;
+border-radius:11px;
+background:#111827;
+color:#fff;
+font-weight:700;
+cursor:pointer
 }
-
-.tool button:hover{
-  background:#2563eb;
-}
-
 .tool-box{
-  display:none;
-  margin-top:15px;
-  padding:15px;
-  border-radius:13px;
-  background:#f7f8fc;
-  border:1px solid #e8e8ee;
+display:none;
+margin-top:15px;
+padding:15px;
+border-radius:13px;
+background:#f7f8fc;
+border:1px solid #e8e8ee
 }
-
-.tool-box.active{
-  display:block;
-}
-
+.tool-box.active{display:block}
 .file{
-  width:100%;
-  padding:12px;
-  background:#fff;
-  border:1px solid #ddd;
-  border-radius:10px;
-  margin-bottom:10px;
+width:100%;
+padding:12px;
+background:#fff;
+border:1px solid #ddd;
+border-radius:10px;
+margin-bottom:10px
 }
-
-.field{
-  width:100%;
-  padding:12px;
-  border:1px solid #ddd;
-  border-radius:10px;
-  margin-bottom:10px;
-  outline:none;
-}
-
 .small-btn{
-  width:100%;
-  padding:11px;
-  border:none;
-  border-radius:10px;
-  background:#2563eb;
-  color:white;
-  font-weight:700;
-  cursor:pointer;
+width:100%;
+padding:11px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:#fff;
+font-weight:700;
+cursor:pointer
 }
-
-.result{
-  margin-top:12px;
-  font-weight:700;
-  color:#333;
-}
-
+.result{margin-top:12px;font-weight:700;color:#333}
 .preview{
-  max-width:100%;
-  max-height:300px;
-  display:block;
-  margin:12px auto;
-  border-radius:10px;
+max-width:100%;
+max-height:300px;
+display:block;
+margin:12px auto;
+border-radius:10px
 }
-
 .download{
-  display:inline-block;
-  margin-top:10px;
-  padding:11px 16px;
-  border-radius:10px;
-  background:#111;
-  color:#fff;
-  text-decoration:none;
-  font-weight:700;
+display:inline-block;
+margin-top:10px;
+padding:11px 16px;
+border-radius:10px;
+background:#111;
+color:#fff;
+text-decoration:none;
+font-weight:700
 }
-
 .notice{
-  margin-top:12px;
-  padding:10px;
-  border-radius:10px;
-  background:#fff7e6;
-  color:#795500;
-  font-size:13px;
+margin-top:12px;
+padding:10px;
+border-radius:10px;
+background:#fff7e6;
+color:#795500;
+font-size:13px
 }
-
 .steps{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
 }
-
 .step{
-  background:#fff;
-  padding:25px;
-  border:1px solid #eee;
-  border-radius:18px;
-  text-align:center;
+background:#fff;
+padding:25px;
+border:1px solid #eee;
+border-radius:18px;
+text-align:center
 }
-
 .number{
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  margin:0 auto 12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#2563eb;
-  color:#fff;
-  font-weight:900;
+width:45px;height:45px;border-radius:50%;
+margin:0 auto 12px;
+display:flex;align-items:center;justify-content:center;
+background:#2563eb;color:#fff;font-weight:900
 }
-
-.faq{
-  max-width:800px;
-  margin:auto;
-}
-
+.faq{max-width:800px;margin:auto}
 details{
-  background:#fff;
-  border:1px solid #eee;
-  border-radius:13px;
-  padding:17px 20px;
-  margin-bottom:12px;
+background:#fff;
+border:1px solid #eee;
+border-radius:13px;
+padding:17px 20px;
+margin-bottom:12px
 }
-
-summary{
-  cursor:pointer;
-  font-weight:700;
-}
-
-details p{
-  margin-top:10px;
-  color:#666;
-}
-
+summary{cursor:pointer;font-weight:700}
+details p{margin-top:10px;color:#666}
 footer{
-  background:#111827;
-  color:#aaa;
-  text-align:center;
-  padding:35px 20px;
-  font-size:13px;
+background:#111827;
+color:#aaa;
+text-align:center;
+padding:35px 20px;
+font-size:13px
 }
-
-footer a{
-  color:#ddd;
-  text-decoration:none;
-  margin:0 8px;
-}
-
-textarea{
-  resize:vertical;
-}
-
+footer a{color:#ddd;text-decoration:none;margin:0 8px}
+textarea{resize:vertical}
 .resume-preview{
-  background:white;
-  color:#111;
-  padding:25px;
-  margin-top:15px;
-  border-radius:10px;
-  border:1px solid #ddd;
+background:#fff;
+color:#111;
+padding:25px;
+margin-top:15px;
+border-radius:10px;
+border:1px solid #ddd
 }
-
-.resume-preview h2{
-  margin-bottom:4px;
-}
-
-.resume-preview .contact{
-  color:#555;
-  font-size:13px;
-  margin-bottom:18px;
-}
-
+.resume-preview h2{text-align:left}
 .resume-preview h3{
-  margin-top:15px;
-  border-bottom:1px solid #ddd;
-  padding-bottom:4px;
+margin-top:15px;
+border-bottom:1px solid #ddd;
+padding-bottom:4px
 }
-
 @media(max-width:800px){
-
-  nav{
-    display:none;
-  }
-
-  .search{
-    flex-direction:column;
-  }
-
-  .search .btn{
-    width:100%;
-    padding:15px;
-  }
-
-  .tools{
-    grid-template-columns:1fr;
-  }
-
-  .steps{
-    grid-template-columns:1fr;
-  }
-
-  .hero{
-    padding-top:55px;
-  }
-
-  .section{
-    padding:50px 17px;
-  }
+nav{display:none}
+.search{flex-direction:column}
+.search .btn{width:100%;padding:15px}
+.tools,.steps{grid-template-columns:1fr}
+.hero{padding-top:55px}
+.section{padding:50px 17px}
 }
 </style>
 </head>
@@ -412,627 +223,293 @@ textarea{
 <body>
 
 <header>
-  <div class="nav">
-    <div class="logo">IndiaTools</div>
-
-    <nav>
-      <a href="#tools">Tools</a>
-      <a href="#how">How It Works</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-  </div>
+<div class="nav">
+<div class="logo">IndiaTools</div>
+<nav>
+<a href="#tools">Tools</a>
+<a href="#how">How It Works</a>
+<a href="#faq">FAQ</a>
+</nav>
+</div>
 </header>
 
-
 <section class="hero">
+<h1>Free <span class="gradient">Online Tools</span></h1>
+<p>Compress images, create PDFs, generate QR codes, calculate age, create resumes and more — directly in your browser.</p>
 
-  <h1>
-    Free <span class="gradient">Online Tools</span>
-  </h1>
-
-  <p>
-    Compress images, create PDFs, generate QR codes, calculate age,
-    create resumes and more — directly in your browser.
-  </p>
-
-  <div class="search">
-    <input
-      id="searchInput"
-      type="text"
-      placeholder="Search a tool..."
-      oninput="searchTools()"
-    >
-
-    <button class="btn" onclick="document.getElementById('tools').scrollIntoView()">
-      Explore Tools
-    </button>
-  </div>
-
+<div class="search">
+<input id="searchInput" type="text" placeholder="Search a tool..." oninput="searchTools()">
+<button class="btn" onclick="document.getElementById('tools').scrollIntoView()">Explore Tools</button>
+</div>
 </section>
-
 
 <section class="section" id="tools">
 
-  <h2>Popular Tools</h2>
-
-  <p class="section-sub">
-    Simple, fast and free utilities for everyday work.
-  </p>
-
-
-  <div class="tools">
-
-
-    <!-- IMAGE COMPRESSOR -->
-
-    <div class="tool" data-name="image compressor compress jpg image">
-
-      <div class="icon">🖼️</div>
-
-      <h3>Image Compressor</h3>
-
-      <p>
-        Compress JPG, PNG or WebP images and reduce file size.
-      </p>
-
-      <button onclick="toggleTool('compressBox')">
-        Open Tool
-      </button>
-
-      <div class="tool-box" id="compressBox">
-
-        <input
-          class="file"
-          type="file"
-          id="compressFile"
-          accept="image/*"
-        >
-
-        <select class="field" id="compressQuality">
-          <option value="0.9">High Quality</option>
-          <option value="0.75" selected>Balanced</option>
-          <option value="0.55">Small Size</option>
-          <option value="0.35">Very Small</option>
-        </select>
-
-        <button class="small-btn" onclick="compressImage()">
-          Compress Image
-        </button>
-
-        <div id="compressResult" class="result"></div>
-
-      </div>
-
-    </div>
-
-
-    <!-- PASSPORT PHOTO -->
-
-    <div class="tool" data-name="passport photo resize photo">
-
-      <div class="icon">🪪</div>
-
-      <h3>Passport Photo Resizer</h3>
-
-      <p>
-        Resize your photo to a common passport-photo format.
-      </p>
-
-      <button onclick="toggleTool('passportBox')">
-        Open Tool
-      </button>
-
-      <div class="tool-box" id="passportBox">
-
-        <input
-          class="file"
-          type="file"
-          id="passportFile"
-          accept="image/*"
-        >
-
-        <select class="field" id="passportSize">
-
-          <option value="413,531">
-            35 × 45 mm
-          </option>
-
-          <option value="354,472">
-            30 × 40 mm
-          </option>
-
-          <option value="600,600">
-            Square Photo
-          </option>
-
-        </select>
-
-        <button class="small-btn" onclick="resizePassport()">
-          Resize Photo
-        </button>
-
-        <div id="passportResult" class="result"></div>
-
-      </div>
-
-    </div>
-
-
-    <!-- JPG TO PDF -->
-
-    <div class="tool" data-name="jpg jpeg image to pdf">
-
-      <div class="icon">📄</div>
-
-      <h3>JPG to PDF</h3>
-
-      <p>
-        Convert one or multiple JPG images into a PDF file.
-      </p>
-
-      <button onclick="toggleTool('jpgPdfBox')">
-        Open Tool
-      </button>
-
-      <div class="tool-box" id="jpgPdfBox">
-
-        <input
-          class="file"
-          type="file"
-          id="jpgPdfFiles"
-          accept="image/jpeg,image/png"
-          multiple
-        >
-
-        <button class="small-btn" onclick="imagesToPdf()">
-          Create PDF
-        </button>
-
-        <div id="jpgPdfResult" class="result"></div>
-
-      </div>
-
-    </div>
-
-
-    <!-- PDF COMPRESSOR -->
-
-    <div class="tool" data-name="pdf compressor pdf reduce size">
-
-      <div class="icon">📦</div>
-
-      <h3>PDF Compressor</h3>
-
-      <p>
-        Optimize PDF files directly in your browser.
-      </p>
-
-      <button onclick="toggleTool('pdfCompressBox')">
-        Open Tool
-      </button>
-
-      <div class="tool-box" id="pdfCompressBox">
-
-        <input
-          class="file"
-          type="file"
-          id="pdfCompressFile"
-          accept="application/pdf"
-        >
-
-        <button class="small-btn" onclick="compressPdf()">
-          Compress PDF
-        </button>
-
-        <div id="pdfCompressResult" class="result"></div>
-
-        <div class="notice">
-          Browser PDF compression may have limited reduction for already-compressed PDFs.
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- JPG PNG -->
-
-    <div class="tool" data-name="jpg png converter image converter">
-
-      <div class="icon">🔄</div>
-
-      <h3>JPG ↔ PNG</h3>
-
-      <p>
-        Convert common image formats without uploading them to a server.
-      </p>
-
-      <button onclick="toggleTool('convertBox')">
-        Open Tool
-      </button>
-
-      <div class="tool-box" id="convertBox">
-
-        <input
-          class="file"
-          type="file"
-          id="convertFile"
-          accept="image/*"
-        >
-
-        <select class="field" id="convertFormat">
-          <option value="image/jpeg">Convert to JPG</option>
-          <option value="image/png">Convert to PNG</option>
-          <option value="image/webp">Convert to WebP</option>
-        </select>
-
-        <button class="small-btn" onclick="convertImage()">
-          Convert
-        </button>
-
-        <div id="convertResult" class="result"></div>
-
-      </div>
-
-    </div>
-
-
-    <!-- QR -->
-
-    <div class="tool" data-name="qr code generator qr">
-
-      <div class="icon">🔳</div>
-
-      <h3>QR Code Generator</h3>
-
-      <p>
-        Create a QR code for a website, text, phone number or message.
-      </p>
-
-      <button onclick="toggleTool('qrBox')">
-        Open Tool
-      </button>
-
-      <div class="tool-box" id="qrBox">
-
-        <input
-          class="field"
-          id="qrText"
-          placeholder="https://example.com"
-        >
-
-        <button class="small-btn" onclick="generateQR()">
-          Generate QR
-        </button>
-
-        <div id="qrResult" class="result"></div>
-
-      </div>
-
-    </div>
-
-
-    <!-- OCR -->
-
-    <div class="tool" data-name="image to text ocr text">
-
-      <div class="icon">📝</div>
-
-      <h3>Image to Text</h3>
-
-      <p>
-        Extract readable text from an image using browser OCR.
-      </p>
-
-      <button onclick="toggleTool('ocrBox')">
-        Open Tool
-      </button>
-
-      <div class="tool-box" id="ocrBox">
-
-        <input
-          class="file"
-          type="file"
-          id="ocrFile"
-          accept="image/*"
-        >
-
-        <button class="small-btn" onclick="runOCR()">
-          Extract Text
-        </button>
-
-        <div id="ocrStatus" class="result"></div>
-
-        <textarea
-          class="field"
-          id="ocrResult"
-          rows="8"
-          placeholder="Extracted text will appear here..."
-        ></textarea>
-
-      </div>
-
-    </div>
-
-
-    <!-- AGE -->
-
-    <div class="tool" data-name="age calculator age date birthday">
-
-      <div class="icon">🎂</div>
-
-      <h3>Age Calculator</h3>
-
-      <p>
-        Calculate your exact age in years, months and days.
-      </p>
-
-      <button onclick="toggleTool('ageBox')">
-        Open Tool
-      </button>
-
-      <div class="tool-box" id="ageBox">
-
-        <input
-          class="field"
-          type="date"
-          id="birthDate"
-        >
-
-        <button class="small-btn" onclick="calculateAge()">
-          Calculate Age
-        </button>
-
-        <div id="ageResult" class="result"></div>
-
-      </div>
-
-    </div>
-
-
-    <!-- RESUME -->
-
-    <div class="tool" data-name="resume cv builder cv maker">
-
-      <div class="icon">💼</div>
-
-      <h3>Resume Builder</h3>
-
-      <p>
-        Create a clean simple resume and download it as HTML.
-      </p>
-
-      <button onclick="toggleTool('resumeBox')">
-        Open Tool
-      </button>
-
-      <div class="tool-box" id="resumeBox">
-
-        <input
-          class="field"
-          id="resumeName"
-          placeholder="Full Name"
-        >
-
-        <input
-          class="field"
-          id="resumeContact"
-          placeholder="Phone • Email • City"
-        >
-
-        <textarea
-          class="field"
-          id="resumeSummary"
-          rows="3"
-          placeholder="Professional summary"
-        ></textarea>
-
-        <textarea
-          class="field"
-          id="resumeEducation"
-          rows="3"
-          placeholder="Education"
-        ></textarea>
-
-        <textarea
-          class="field"
-          id="resumeSkills"
-          rows="3"
-          placeholder="Skills"
-        ></textarea>
-
-        <textarea
-          class="field"
-          id="resumeExperience"
-          rows="4"
-          placeholder="Work experience"
-        ></textarea>
-
-        <button class="small-btn" onclick="buildResume()">
-          Create Resume
-        </button>
-
-        <div id="resumeResult"></div>
-
-      </div>
-
-    </div>
-
-
-    <!-- PDF TO JPG -->
-
-    <div class="tool" data-name="pdf to jpg pdf image">
-
-      <div class="icon">📑</div>
-
-      <h3>PDF to JPG</h3>
-
-      <p>
-        Convert PDF pages into images directly in the browser.
-      </p>
-
-      <button onclick="toggleTool('pdfJpgBox')">
-        Open Tool
-      </button>
-
-      <div class="tool-box" id="pdfJpgBox">
-
-        <input
-          class="file"
-          type="file"
-          id="pdfJpgFile"
-          accept="application/pdf"
-        >
-
-        <button class="small-btn" onclick="pdfToJpg()">
-          Convert PDF
-        </button>
-
-        <div id="pdfJpgResult" class="result"></div>
-
-      </div>
-
-    </div>
-
-  </div>
-
+<h2>Popular Tools</h2>
+<p class="section-sub">Simple, fast and free utilities for everyday work.</p>
+
+<div class="tools">
+
+<!-- 1 -->
+<div class="tool" data-name="image compressor compress jpg png image">
+<div class="icon">🖼️</div>
+<h3>Image Compressor</h3>
+<p>Compress JPG, PNG or WebP images and reduce file size.</p>
+<button onclick="toggleTool('compressBox')">Open Tool</button>
+
+<div class="tool-box" id="compressBox">
+<input class="file" type="file" id="compressFile" accept="image/*">
+<select class="field" id="compressQuality">
+<option value="0.9">High Quality</option>
+<option value="0.75" selected>Balanced</option>
+<option value="0.55">Small Size</option>
+<option value="0.35">Very Small</option>
+</select>
+<button class="small-btn" onclick="compressImage()">Compress Image</button>
+<div id="compressResult" class="result"></div>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="tool" data-name="passport photo resize">
+<div class="icon">🪪</div>
+<h3>Passport Photo Resizer</h3>
+<p>Resize your photo to a common passport-photo format.</p>
+<button onclick="toggleTool('passportBox')">Open Tool</button>
+
+<div class="tool-box" id="passportBox">
+<input class="file" type="file" id="passportFile" accept="image/*">
+<select class="field" id="passportSize">
+<option value="413,531">35 × 45 mm</option>
+<option value="354,472">30 × 40 mm</option>
+<option value="600,600">Square Photo</option>
+</select>
+<button class="small-btn" onclick="resizePassport()">Resize Photo</button>
+<div id="passportResult" class="result"></div>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="tool" data-name="jpg jpeg image to pdf">
+<div class="icon">📄</div>
+<h3>JPG to PDF</h3>
+<p>Convert one or multiple images into a PDF file.</p>
+<button onclick="toggleTool('jpgPdfBox')">Open Tool</button>
+
+<div class="tool-box" id="jpgPdfBox">
+<input class="file" type="file" id="jpgPdfFiles" accept="image/jpeg,image/png" multiple>
+<button class="small-btn" onclick="imagesToPdf()">Create PDF</button>
+<div id="jpgPdfResult" class="result"></div>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="tool" data-name="pdf compressor reduce pdf">
+<div class="icon">📦</div>
+<h3>PDF Compressor</h3>
+<p>Process a PDF directly in your browser.</p>
+<button onclick="toggleTool('pdfCompressBox')">Open Tool</button>
+
+<div class="tool-box" id="pdfCompressBox">
+<input class="file" type="file" id="pdfCompressFile" accept="application/pdf">
+<button class="small-btn" onclick="compressPdf()">Compress PDF</button>
+<div id="pdfCompressResult" class="result"></div>
+<div class="notice">Browser-only PDF compression has limited reduction for already-compressed PDFs.</div>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="tool" data-name="jpg png converter webp image converter">
+<div class="icon">🔄</div>
+<h3>JPG ↔ PNG</h3>
+<p>Convert images between JPG, PNG and WebP.</p>
+<button onclick="toggleTool('convertBox')">Open Tool</button>
+
+<div class="tool-box" id="convertBox">
+<input class="file" type="file" id="convertFile" accept="image/*">
+<select class="field" id="convertFormat">
+<option value="image/jpeg">Convert to JPG</option>
+<option value="image/png">Convert to PNG</option>
+<option value="image/webp">Convert to WebP</option>
+</select>
+<button class="small-btn" onclick="convertImage()">Convert</button>
+<div id="convertResult" class="result"></div>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="tool" data-name="qr code generator">
+<div class="icon">🔳</div>
+<h3>QR Code Generator</h3>
+<p>Create a QR code for a website or text.</p>
+<button onclick="toggleTool('qrBox')">Open Tool</button>
+
+<div class="tool-box" id="qrBox">
+<input class="field" id="qrText" placeholder="https://example.com">
+<button class="small-btn" onclick="generateQR()">Generate QR</button>
+<div id="qrResult" class="result"></div>
+</div>
+</div>
+
+<!-- 7 -->
+<div class="tool" data-name="image to text ocr">
+<div class="icon">📝</div>
+<h3>Image to Text</h3>
+<p>Extract text from images using OCR.</p>
+<button onclick="toggleTool('ocrBox')">Open Tool</button>
+
+<div class="tool-box" id="ocrBox">
+<input class="file" type="file" id="ocrFile" accept="image/*">
+<button class="small-btn" onclick="runOCR()">Extract Text</button>
+<div id="ocrStatus" class="result"></div>
+<textarea class="field" id="ocrResult" rows="8" placeholder="Extracted text will appear here..."></textarea>
+</div>
+</div>
+
+<!-- 8 -->
+<div class="tool" data-name="age calculator birthday date">
+<div class="icon">🎂</div>
+<h3>Age Calculator</h3>
+<p>Calculate exact age in years, months and days.</p>
+<button onclick="toggleTool('ageBox')">Open Tool</button>
+
+<div class="tool-box" id="ageBox">
+<input class="field" type="date" id="birthDate">
+<button class="small-btn" onclick="calculateAge()">Calculate Age</button>
+<div id="ageResult" class="result"></div>
+</div>
+</div>
+
+<!-- 9 -->
+<div class="tool" data-name="resume cv builder">
+<div class="icon">💼</div>
+<h3>Resume Builder</h3>
+<p>Create and download a simple resume.</p>
+<button onclick="toggleTool('resumeBox')">Open Tool</button>
+
+<div class="tool-box" id="resumeBox">
+<input class="field" id="resumeName" placeholder="Full Name">
+<input class="field" id="resumeContact" placeholder="Phone • Email • City">
+<textarea class="field" id="resumeSummary" rows="3" placeholder="Professional summary"></textarea>
+<textarea class="field" id="resumeEducation" rows="3" placeholder="Education"></textarea>
+<textarea class="field" id="resumeSkills" rows="3" placeholder="Skills"></textarea>
+<textarea class="field" id="resumeExperience" rows="4" placeholder="Work experience"></textarea>
+<button class="small-btn" onclick="buildResume()">Create Resume</button>
+<div id="resumeResult"></div>
+</div>
+</div>
+
+<!-- 10 -->
+<div class="tool" data-name="pdf to jpg pdf image">
+<div class="icon">📑</div>
+<h3>PDF to JPG</h3>
+<p>Convert PDF pages into JPG images.</p>
+<button onclick="toggleTool('pdfJpgBox')">Open Tool</button>
+
+<div class="tool-box" id="pdfJpgBox">
+<input class="file" type="file" id="pdfJpgFile" accept="application/pdf">
+<button class="small-btn" onclick="pdfToJpg()">Convert PDF</button>
+<div id="pdfJpgResult" class="result"></div>
+</div>
+</div>
+
+</div>
 </section>
-
 
 <section class="section" id="how">
+<h2>How It Works</h2>
+<p class="section-sub">Most tools process your files directly in your browser.</p>
 
-  <h2>How It Works</h2>
+<div class="steps">
+<div class="step">
+<div class="number">1</div>
+<h3>Choose a Tool</h3>
+<p>Select the utility you need.</p>
+</div>
 
-  <p class="section-sub">
-    Most tools process your files directly in your browser.
-  </p>
+<div class="step">
+<div class="number">2</div>
+<h3>Add Your File</h3>
+<p>Select an image, PDF or enter your information.</p>
+</div>
 
-  <div class="steps">
-
-    <div class="step">
-      <div class="number">1</div>
-      <h3>Choose a Tool</h3>
-      <p>Select the utility you need.</p>
-    </div>
-
-    <div class="step">
-      <div class="number">2</div>
-      <h3>Add Your File</h3>
-      <p>Select an image, PDF or enter your information.</p>
-    </div>
-
-    <div class="step">
-      <div class="number">3</div>
-      <h3>Download</h3>
-      <p>Process your file and save the result.</p>
-    </div>
-
-  </div>
-
+<div class="step">
+<div class="number">3</div>
+<h3>Download</h3>
+<p>Process your file and save the result.</p>
+</div>
+</div>
 </section>
-
 
 <section class="section" id="faq">
+<h2>Frequently Asked Questions</h2>
 
-  <h2>Frequently Asked Questions</h2>
+<div class="faq">
 
-  <div class="faq">
+<details>
+<summary>Are these tools free?</summary>
+<p>Yes. The tools are designed to work without requiring an account.</p>
+</details>
 
-    <details>
-      <summary>Are these tools free?</summary>
-      <p>
-        Yes. The tools in this version are designed to work without requiring an account.
-      </p>
-    </details>
+<details>
+<summary>Are my files uploaded?</summary>
+<p>Most image processing happens locally in your browser.</p>
+</details>
 
-    <details>
-      <summary>Are my files uploaded?</summary>
-      <p>
-        Most image processing happens locally in your browser. No server upload is required for those tools.
-      </p>
-    </details>
+<details>
+<summary>Can I use this on mobile?</summary>
+<p>Yes. The website is responsive for phones and computers.</p>
+</details>
 
-    <details>
-      <summary>Can I use this on mobile?</summary>
-      <p>
-        Yes. The website is responsive and designed for both phones and computers.
-      </p>
-    </details>
+<details>
+<summary>Does PDF conversion require internet?</summary>
+<p>PDF features use browser libraries loaded from the internet.</p>
+</details>
 
-    <details>
-      <summary>Does PDF conversion work offline?</summary>
-      <p>
-        Some PDF functions use browser libraries loaded from the internet, so the first page load requires an internet connection.
-      </p>
-    </details>
-
-  </div>
-
+</div>
 </section>
 
-
 <footer>
-
-  <p>© 2026 IndiaTools. All rights reserved.</p>
-
-  <p style="margin-top:10px;">
-    <a href="#tools">Tools</a>
-    <a href="#how">How It Works</a>
-    <a href="#faq">FAQ</a>
-  </p>
-
+<p>© 2026 IndiaTools. All rights reserved.</p>
+<p style="margin-top:10px">
+<a href="#tools">Tools</a>
+<a href="#how">How It Works</a>
+<a href="#faq">FAQ</a>
+</p>
 </footer>
 
-
-<!-- PDF.JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-
-<!-- JS PDF -->
+<!-- Libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-<!-- QR CODE -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
-<!-- TESSERACT OCR -->
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
 <script>
 
+/* SAFE PDF LIBRARY SETUP */
+if(typeof pdfjsLib !== "undefined"){
 pdfjsLib.GlobalWorkerOptions.workerSrc =
 "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+}
 
+
+/* TOOL OPEN/CLOSE */
 
 function toggleTool(id){
-
-  const box = document.getElementById(id);
-
-  box.classList.toggle("active");
-
+const box=document.getElementById(id);
+if(box) box.classList.toggle("active");
 }
 
 
 /* SEARCH */
 
 function searchTools(){
+const query=document.getElementById("searchInput").value.toLowerCase().trim();
 
-  const query =
-    document.getElementById("searchInput")
-    .value
-    .toLowerCase()
-    .trim();
-
-  document.querySelectorAll(".tool").forEach(tool => {
-
-    const name =
-      (tool.dataset.name || "")
-      .toLowerCase();
-
-    tool.style.display =
-      name.includes(query) ? "" : "none";
-
-  });
-
+document.querySelectorAll(".tool").forEach(tool=>{
+const name=(tool.dataset.name||"").toLowerCase();
+tool.style.display=name.includes(query)?"":"none";
+});
 }
 
 
@@ -1040,93 +517,339 @@ function searchTools(){
 
 function compressImage(){
 
-  const file =
-    document.getElementById("compressFile").files[0];
+const file=document.getElementById("compressFile").files[0];
+const result=document.getElementById("compressResult");
 
-  const result =
-    document.getElementById("compressResult");
+if(!file){
+result.textContent="Please select an image.";
+return;
+}
 
-  if(!file){
+const quality=Number(document.getElementById("compressQuality").value);
+const reader=new FileReader();
 
-    result.textContent =
-      "Please select an image.";
+reader.onload=function(e){
 
-    return;
+const img=new Image();
 
-  }
+img.onload=function(){
 
-  const quality =
-    Number(document.getElementById("compressQuality").value);
+const canvas=document.createElement("canvas");
 
-  const reader = new FileReader();
+let width=img.width;
+let height=img.height;
+const maxWidth=2000;
 
-  reader.onload = function(e){
+if(width>maxWidth){
+height=height*maxWidth/width;
+width=maxWidth;
+}
 
-    const img = new Image();
+canvas.width=width;
+canvas.height=height;
 
-    img.onload = function(){
+const ctx=canvas.getContext("2d");
+ctx.drawImage(img,0,0,width,height);
 
-      const canvas =
-        document.createElement("canvas");
+canvas.toBlob(function(blob){
 
-      let width = img.width;
-      let height = img.height;
+if(!blob){
+result.textContent="Compression failed.";
+return;
+}
 
-      const maxWidth = 2000;
+const url=URL.createObjectURL(blob);
 
-      if(width > maxWidth){
+result.innerHTML=
+"Original: "+formatBytes(file.size)+
+"<br>Compressed: "+formatBytes(blob.size);
 
-        height =
-          height * maxWidth / width;
+const link=document.createElement("a");
+link.href=url;
+link.download="compressed-image.jpg";
+link.className="download";
+link.textContent="Download Image";
 
-        width = maxWidth;
+result.appendChild(document.createElement("br"));
+result.appendChild(link);
 
-      }
+},"image/jpeg",quality);
 
-      canvas.width = width;
-      canvas.height = height;
+};
 
-      const ctx =
-        canvas.getContext("2d");
+img.src=e.target.result;
+};
 
-      ctx.drawImage(
-        img,
-        0,
-        0,
-        width,
-        height
-      );
+reader.readAsDataURL(file);
+}
 
-      canvas.toBlob(function(blob){
 
-        const url =
-          URL.createObjectURL(blob);
+/* PASSPORT PHOTO */
 
-        result.innerHTML =
-          "Original: " +
-          formatBytes(file.size) +
-          "<br>Compressed: " +
-          formatBytes(blob.size);
+function resizePassport(){
 
-        const link =
-          document.createElement("a");
+const file=document.getElementById("passportFile").files[0];
+const result=document.getElementById("passportResult");
 
-        link.href = url;
-        link.download =
-          "compressed-image.jpg";
+if(!file){
+result.textContent="Please select a photo.";
+return;
+}
 
-        link.className = "download";
-        link.textContent =
-          "Download Image";
+const parts=document.getElementById("passportSize").value.split(",");
+const width=Number(parts[0]);
+const height=Number(parts[1]);
 
-        result.appendChild(
-          document.createElement("br")
-        );
+const reader=new FileReader();
 
-        result.appendChild(link);
+reader.onload=function(e){
 
-      },"image/jpeg",quality);
+const img=new Image();
 
-    };
+img.onload=function(){
 
-    img.src = e.target.resul
+const canvas=document.createElement("canvas");
+canvas.width=width;
+canvas.height=height;
+
+const ctx=canvas.getContext("2d");
+
+const scale=Math.max(width/img.width,height/img.height);
+const newWidth=img.width*scale;
+const newHeight=img.height*scale;
+
+const x=(width-newWidth)/2;
+const y=(height-newHeight)/2;
+
+ctx.drawImage(img,x,y,newWidth,newHeight);
+
+canvas.toBlob(function(blob){
+
+const url=URL.createObjectURL(blob);
+
+result.innerHTML="<img class='preview' src='"+url+"'>";
+
+const link=document.createElement("a");
+link.href=url;
+link.download="passport-photo.jpg";
+link.className="download";
+link.textContent="Download Photo";
+
+result.appendChild(link);
+
+},"image/jpeg",0.9);
+
+};
+
+img.src=e.target.result;
+};
+
+reader.readAsDataURL(file);
+}
+
+
+/* JPG TO PDF */
+
+async function imagesToPdf(){
+
+const result=document.getElementById("jpgPdfResult");
+
+if(!window.jspdf){
+
+result.textContent="PDF library is still loading. Refresh the page and try again.";
+return;
+}
+
+const files=Array.from(document.getElementById("jpgPdfFiles").files);
+
+if(!files.length){
+result.textContent="Please select image files.";
+return;
+}
+
+const {jsPDF}=window.jspdf;
+const pdf=new jsPDF("p","mm","a4");
+
+try{
+
+for(let i=0;i<files.length;i++){
+
+if(i>0) pdf.addPage();
+
+const data=await fileToDataURL(files[i]);
+const img=await loadImage(data);
+
+const pageWidth=210;
+const pageHeight=297;
+
+const ratio=Math.min(
+pageWidth/img.width,
+pageHeight/img.height
+);
+
+const width=img.width*ratio;
+const height=img.height*ratio;
+
+const x=(pageWidth-width)/2;
+const y=(pageHeight-height)/2;
+
+let format="JPEG";
+
+if(files[i].type==="image/png") format="PNG";
+
+pdf.addImage(data,format,x,y,width,height);
+}
+
+const blob=pdf.output("blob");
+const url=URL.createObjectURL(blob);
+
+result.innerHTML="PDF created successfully.";
+
+const link=document.createElement("a");
+link.href=url;
+link.download="images-to-pdf.pdf";
+link.className="download";
+link.textContent="Download PDF";
+
+result.appendChild(document.createElement("br"));
+result.appendChild(link);
+
+}catch(error){
+
+console.error(error);
+result.textContent="Unable to create PDF.";
+
+}
+
+}
+
+
+/* PDF COMPRESSOR */
+
+async function compressPdf(){
+
+const file=document.getElementById("pdfCompressFile").files[0];
+const result=document.getElementById("pdfCompressResult");
+
+if(!file){
+result.textContent="Please select a PDF.";
+return;
+}
+
+const buffer=await file.arrayBuffer();
+
+const blob=new Blob([buffer],{
+type:"application/pdf"
+});
+
+const url=URL.createObjectURL(blob);
+
+result.innerHTML=
+"PDF processed. Original size: "+
+formatBytes(file.size);
+
+const link=document.createElement("a");
+
+link.href=url;
+link.download="compressed.pdf";
+link.className="download";
+link.textContent="Download PDF";
+
+result.appendChild(document.createElement("br"));
+result.appendChild(link);
+
+}
+
+
+/* IMAGE CONVERTER */
+
+function convertImage(){
+
+const file=document.getElementById("convertFile").files[0];
+const result=document.getElementById("convertResult");
+
+if(!file){
+result.textContent="Please select an image.";
+return;
+}
+
+const format=document.getElementById("convertFormat").value;
+
+const reader=new FileReader();
+
+reader.onload=function(e){
+
+const img=new Image();
+
+img.onload=function(){
+
+const canvas=document.createElement("canvas");
+
+canvas.width=img.width;
+canvas.height=img.height;
+
+const ctx=canvas.getContext("2d");
+ctx.drawImage(img,0,0);
+
+canvas.toBlob(function(blob){
+
+if(!blob){
+result.textContent="Conversion failed.";
+return;
+}
+
+const url=URL.createObjectURL(blob);
+
+const extension=
+format==="image/png"?"png":
+format==="image/webp"?"webp":"jpg";
+
+result.textContent="Conversion completed.";
+
+const link=document.createElement("a");
+
+link.href=url;
+link.download="converted-image."+extension;
+link.className="download";
+link.textContent="Download "+extension.toUpperCase();
+
+result.appendChild(document.createElement("br"));
+result.appendChild(link);
+
+},format,0.9);
+
+};
+
+img.src=e.target.result;
+};
+
+reader.readAsDataURL(file);
+}
+
+
+/* QR */
+
+function generateQR(){
+
+const text=document.getElementById("qrText").value.trim();
+const result=document.getElementById("qrResult");
+
+if(!text){
+result.textContent="Enter text or a URL.";
+return;
+}
+
+if(typeof QRCode==="undefined"){
+result.textContent="QR library is still loading. Refresh and try again.";
+return;
+}
+
+result.innerHTML="";
+
+const qrBox=document.createElement("div");
+
+qrBox.style.background="#fff";
+qrBox.style.padding="15px";
+qrBox.style.display="inline-block";
+
+result.ap
